@@ -1,13 +1,15 @@
+import os
+
+import discord
+import heroku3
+import redis
+from discord.ext import commands
+
+import constants as c
 import info
 import misc
 import mobs
 import non_prefix
-import os
-
-import discord
-from discord.ext import commands
-
-import constants as c
 
 
 class Bot(commands.Bot):
@@ -61,6 +63,7 @@ class Bot(commands.Bot):
             await channel.send(embed=embed)
 
 
-bot = Bot(command_prefix='m!')
-TOKEN = os.environ.get("token")
-bot.run(TOKEN, bot=True, reconnect=True)
+if __name__ == "__main__":
+    bot = Bot(command_prefix='m!')
+    TOKEN = os.environ.get("token")
+    bot.run(TOKEN, bot=True, reconnect=True)
