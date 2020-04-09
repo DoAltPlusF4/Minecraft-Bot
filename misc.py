@@ -50,9 +50,9 @@ class Misc(commands.Cog, name="Miscellaneous"):
         print('--------------------------------')
         await ctx.channel.trigger_typing()
         embed = discord.Embed(
-            title='--> Vote for Minecraft Bot <--',
+            title="--> Vote for Minecraft Bot <--",
             colour=discord.Colour.green(),
-            url='https://discordbots.org/bot/616308233950199828/vote'
+            url=f"https://top.gg/bot/{self.bot.user.id}/vote"
         )
         embed.set_image(url=self.bot.user.avatar_url)
         await ctx.send(embed=embed)
