@@ -63,9 +63,11 @@ class Misc(commands.Cog, name="Miscellaneous"):
         print(ctx.message.author)
         print(ctx.message.guild)
         print('--------------------------------')
-        await member.send('''Have some diamonds!!!!!!! ** Sent by {0} **
-	<:diamond:616316009288040470> <:diamond:616316009288040470> <:diamond:616316009288040470> <:diamond:616316009288040470> <:diamond:616316009288040470> '''.format(ctx.message.author))
-        await ctx.send('Sent!')
+        await member.send(f"""
+        Have some diamonds!!!!!!! ** Sent by {ctx.message.author} **
+	    <:diamond:616316009288040470> <:diamond:616316009288040470> <:diamond:616316009288040470> <:diamond:616316009288040470> <:diamond:616316009288040470> 
+        """)
+        await ctx.send("Sent!")
 
 
 def setup(bot):
