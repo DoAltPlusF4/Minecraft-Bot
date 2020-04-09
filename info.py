@@ -59,32 +59,29 @@ https://www.minecraft.net/en-us/article/minecraft-snapshot-20w15a
 
     @commands.command()
     async def bedrock(self, ctx):
-       print(ctx.message.content)
-       print(ctx.message.author)
-       print(ctx.message.guild)
-       print("--------------------------------")
-       await ctx.channel.trigger_typing()
-       embed = discord.Embed(
+        print(ctx.message.content)
+        print(ctx.message.author)
+        print(ctx.message.guild)
+        print("--------------------------------")
+        await ctx.channel.trigger_typing()
+        embed = discord.Embed(
             title="Bedrock is available on:",
-            description=
-           "Phone and Tablet (Android, IOS, Fire OS, Windows Mobile), Windows 10, Nintendo Switch, Xbox One, PS4, Fire TV and Gear VR. Learn more about Bedrock  at https://minecraft.gamepedia.com/Bedrock_Edition",
+            description="Phone and Tablet (Android, IOS, Fire OS, Windows Mobile), Windows 10, Nintendo Switch, Xbox One, PS4, Fire TV and Gear VR. Learn more about Bedrock  at https://minecraft.gamepedia.com/Bedrock_Edition",
             colour=discord.Colour.green())
-       await ctx.channel.send(embed=embed)
+        await ctx.channel.send(embed=embed)
 
     @commands.command()
     async def java(self, ctx):
-       print(ctx.message.content)
-       print(ctx.message.author)
-       print(ctx.message.guild)
-       print("--------------------------------")
-       await ctx.channel.trigger_typing()
-       embed = discord.Embed(
-           title="Java Edition is available on:",
-           description=
-           "Linux, MacOS and Windows. Learn more about Java Edition  at https://minecraft.gamepedia.com/Java_Edition",
-           colour=discord.Colour.green())
-       await ctx.channel.send(embed=embed)
-
+        print(ctx.message.content)
+        print(ctx.message.author)
+        print(ctx.message.guild)
+        print("--------------------------------")
+        await ctx.channel.trigger_typing()
+        embed = discord.Embed(
+            title="Java Edition is available on:",
+            description="Linux, MacOS and Windows. Learn more about Java Edition  at https://minecraft.gamepedia.com/Java_Edition",
+            colour=discord.Colour.green())
+        await ctx.channel.send(embed=embed)
 
 
 def setup(bot):

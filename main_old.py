@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 import discord
 import keep_alive
 from discord.ext import commands
@@ -7,9 +9,7 @@ import constants as c
 
 recentlyCalled = {}
 
-from dotenv import load_dotenv
 load_dotenv()
-import os
 TOKEN = os.getenv("TOKEN")
 
 bot = commands.Bot(command_prefix='m!', description='Minecraft')
@@ -162,13 +162,11 @@ async def creeper(ctx):
     print(ctx.message.guild)
     print('--------------------------------')
     embed = discord.Embed(
-        title=
-        'Creeper <:creeper:616315623219396660> <:creeper:616315623219396660> <:creeper:616315623219396660>',
+        title='Creeper <:creeper:616315623219396660> <:creeper:616315623219396660> <:creeper:616315623219396660>',
         description='Aww Man...',
         colour=discord.Colour.green())
     embed.set_image(
-        url=
-        'https://thumbs.gfycat.com/EntireReflectingKakarikis-size_restricted.gif'
+        url='https://thumbs.gfycat.com/EntireReflectingKakarikis-size_restricted.gif'
     )
     await ctx.send(embed=embed)
 
@@ -205,8 +203,7 @@ async def bedrock(ctx):
     await ctx.channel.trigger_typing()
     embed = discord.Embed(
         title='Bedrock is available on:',
-        description=
-        'Phone and Tablet (Android, IOS, Fire OS, Windows Mobile), Windows 10, Nintendo Switch, Xbox One, PS4, Fire TV and Gear VR. Learn more about Bedrock  at https://minecraft.gamepedia.com/Bedrock_Edition',
+        description='Phone and Tablet (Android, IOS, Fire OS, Windows Mobile), Windows 10, Nintendo Switch, Xbox One, PS4, Fire TV and Gear VR. Learn more about Bedrock  at https://minecraft.gamepedia.com/Bedrock_Edition',
         colour=discord.Colour.green())
     await ctx.channel.send(embed=embed)
 
@@ -220,8 +217,7 @@ async def java(ctx):
     await ctx.channel.trigger_typing()
     embed = discord.Embed(
         title='Java Edition is available on:',
-        description=
-        'Linux, MacOS and Windows. Learn more about Java Edition  at https://minecraft.gamepedia.com/Java_Edition',
+        description='Linux, MacOS and Windows. Learn more about Java Edition  at https://minecraft.gamepedia.com/Java_Edition',
         colour=discord.Colour.green())
     await ctx.channel.send(embed=embed)
 
@@ -249,12 +245,10 @@ async def server(ctx):
     if ctx.guild.id == c.SERVER_ID:
         embed = discord.Embed(
             title='You are already in this server',
-            description=
-            f'However, you can still invite your friends with this link: {c.SERVER_INVITE}',
+            description=f'However, you can still invite your friends with this link: {c.SERVER_INVITE}',
             colour=discord.Colour.green())
         embed.set_image(
-            url=
-            'https://cdn.discordapp.com/attachments/539843161711968278/625373937102094336/d3d41affe02b7c34414883979a5aac52.png'
+            url='https://cdn.discordapp.com/attachments/539843161711968278/625373937102094336/d3d41affe02b7c34414883979a5aac52.png'
         )
         return await ctx.send(embed=embed)
     await ctx.channel.trigger_typing()
@@ -263,8 +257,7 @@ async def server(ctx):
         colour=discord.Colour.green(),
         url='https://discord.gg/YFnWHsh')
     embed.set_image(
-        url=
-        'https://cdn.discordapp.com/attachments/539843161711968278/625373937102094336/d3d41affe02b7c34414883979a5aac52.png'
+        url='https://cdn.discordapp.com/attachments/539843161711968278/625373937102094336/d3d41affe02b7c34414883979a5aac52.png'
     )
     await ctx.send(embed=embed)
 
@@ -281,8 +274,7 @@ async def vote(ctx):
         colour=discord.Colour.green(),
         url='https://discordbots.org/bot/616308233950199828/vote')
     embed.set_image(
-        url=
-        'https://cdn.discordapp.com/attachments/539843161711968278/625373937102094336/d3d41affe02b7c34414883979a5aac52.png'
+        url='https://cdn.discordapp.com/attachments/539843161711968278/625373937102094336/d3d41affe02b7c34414883979a5aac52.png'
     )
     await ctx.send(embed=embed)
 
@@ -311,8 +303,7 @@ async def zombie(ctx):
 Zombies spawn in groups of 4. They pursue the player on sight from 40 blocks away, as opposed to 16 blocks for other hostile mobs. The detection range of zombies is reduced to half of their normal range (20 blocks) when the player is wearing a zombie mob head.‌[Java Edition only] Zombies periodically make groaning sounds, which can be heard up to 16 blocks away. Zombies attempt to avoid obstacles, including sheer cliffs and lava, and try to find the shortest path toward the player. Unlike skeletons, zombies do not try to avoid being hit, and continue to pursue the player even when being attacked. Zombies can sometimes deal damage through a closed door, as shown in the picture to the right. Zombies sink in water, which facilitates their transformation into drowned.''',
         colour=discord.Colour.green())
     embed.set_image(
-        url=
-        'https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/4/42/ZombieInDoor.png/300px-ZombieInDoor.png?version=1cf1c53737551fae1d2df791383f1122'
+        url='https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/4/42/ZombieInDoor.png/300px-ZombieInDoor.png?version=1cf1c53737551fae1d2df791383f1122'
     )
     await ctx.send(embed=embed)
 
@@ -330,8 +321,7 @@ Spiders are hostile to the player and to iron golems as long as the light level 
 Spiders can climb up over walls and other obstacles. If a spider cannot find an ideal path to the player (when a player goes behind or on top of a wall), it approaches as close as it can to the player's position from the outside or below, and proceed to climb the wall vertically until it gets to the top, even if it loses its aggression towards the player. Additionally, when a spider loses its aggression on the player, it continues moving forward blindly for about two seconds. This behavior causes the spider to climb up any walls in its path. If a spider tries to go through the world border, it starts climbing the world border instead.''',
         colour=discord.Colour.red())
     embed.set_image(
-        url=
-        'https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/8/84/Spider.png/150px-Spider.png?version=f0d20dc8fb4812c9954026abc83fbb08'
+        url='https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/8/84/Spider.png/150px-Spider.png?version=f0d20dc8fb4812c9954026abc83fbb08'
     )
     await ctx.send(embed=embed)
 
@@ -360,8 +350,7 @@ Skeletons are also able to climb ladders, but only when forced to, as their AI d
 Skeletons holding tipped arrows in their offhand always shoot that type of arrow; these arrows are not consumed.''',
     )
     embed.set_image(
-        url=
-        'https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/2/23/Skeleton.png/125px-Skeleton.png?version=65b75c40596c1824995eb8bb5180bac0'
+        url='https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/2/23/Skeleton.png/125px-Skeleton.png?version=65b75c40596c1824995eb8bb5180bac0'
     )
     await ctx.send(embed=embed)
 
@@ -391,8 +380,7 @@ Zombie pigmen try to destroy any turtle eggs they see within 23 blocks away, not
 Zombie pigmen are undead mobs, and are damaged by the status effect Instant Health and healed by the status effect Instant Damage. They are unaffected by the status effects Regeneration and Poison. They are ignored by the wither and affected by the Smite Enchantment.''',
         colour=discord.Colour.green())
     embed.set_image(
-        url=
-        'https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/0/09/Zombie_Pigman.png/150px-Zombie_Pigman.png?version=e4e4427627095d2a70017d437eeb3beb'
+        url='https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/0/09/Zombie_Pigman.png/150px-Zombie_Pigman.png?version=e4e4427627095d2a70017d437eeb3beb'
     )
     await ctx.send(embed=embed)
 
@@ -413,8 +401,7 @@ The ender dragon spawns naturally in the End when the first player enters the di
 Players can re-summon the ender dragon once the fight is over by placing four end crystals on the edges of the exit portal — one on each side. (Fewer crystals can be used by exploiting this trick.) When the dragon is re-summoned, a series of explosions resets the obsidian pillars, iron bars, and end crystals. The top of each pillar will appear to explode, destroying any player-placed blocks.''',
         colour=discord.Colour.purple())
     embed.set_image(
-        url=
-        'https://gamepedia.cursecdn.com/minecraft_gamepedia/0/0a/Ender_Dragon.gif?version=747d5fc9faed80f1aea57b0b234bcc85'
+        url='https://gamepedia.cursecdn.com/minecraft_gamepedia/0/0a/Ender_Dragon.gif?version=747d5fc9faed80f1aea57b0b234bcc85'
     )
     await ctx.send(embed=embed)
 
@@ -438,8 +425,7 @@ Like other hostile mobs, the wither despawns when the difficulty is changed to P
 ''',
     )
     embed.set_image(
-        url=
-        'https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/a/aa/Wither.png/250px-Wither.png?version=91949cfe97fe259bf5fda0393e4c4373'
+        url='https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/a/aa/Wither.png/250px-Wither.png?version=91949cfe97fe259bf5fda0393e4c4373'
     )
     await ctx.send(embed=embed)
 
@@ -462,8 +448,7 @@ Pigs follow any player carrying a carrot, carrot on a stick, potato, or beetroot
 When a pig is struck by lightning or hit by a trident with the Channeling enchantment during a thunderstorm, it transforms into a zombie pigman. If the pig was equipped with a saddle, the saddle is lost, and a mounted player is ejected.''',
         colour=discord.Colour.purple())
     embed.set_image(
-        url=
-        'https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/2/20/Saddled_Pig.png/150px-Saddled_Pig.png?version=86aec73af77217ee1d10fc0a11fe0557'
+        url='https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/2/20/Saddled_Pig.png/150px-Saddled_Pig.png?version=86aec73af77217ee1d10fc0a11fe0557'
     )
     await ctx.send(embed=embed)
 
@@ -476,8 +461,7 @@ async def cow(ctx):
     print('--------------------------------')
     embed = discord.Embed(
         title='Cow',
-        description=
-        '''A cow wanders around, mooing and breathing occasionally. They avoid water, lava and walking off cliffs high enough to cause fall damage. They flee for a few seconds when harmed.
+        description='''A cow wanders around, mooing and breathing occasionally. They avoid water, lava and walking off cliffs high enough to cause fall damage. They flee for a few seconds when harmed.
 
 A cow follows a player who holds wheat, but stops following if separated from the player by at least 8 blocks.
 
@@ -485,8 +469,7 @@ If cows are given wheat, they enter love mode and pair off to create calves, gra
 ''',
         colour=discord.Colour.dark_red())
     embed.set_image(
-        url=
-        'https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/8/84/Cow.png/150px-Cow.png?version=0c947ece55d9b6745a416496302a09f9'
+        url='https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/8/84/Cow.png/150px-Cow.png?version=0c947ece55d9b6745a416496302a09f9'
     )
     await ctx.send(embed=embed)
 
@@ -517,8 +500,7 @@ Like other baby animals, killing a lamb yields no items nor experience.
 ''',
         colour=discord.Colour.dark_red())
     embed.set_image(
-        url=
-        'https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/6/69/White_Sheep.png/160px-White_Sheep.png?version=a84f92e72ee9341aeea392db587459bc'
+        url='https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/6/69/White_Sheep.png/160px-White_Sheep.png?version=a84f92e72ee9341aeea392db587459bc'
     )
     await ctx.send(embed=embed)
 
@@ -533,12 +515,10 @@ async def invite(ctx):
     embed = discord.Embed(
         title='--> Minecraft Bot Invite Link <--',
         colour=discord.Colour.green(),
-        url=
-        'https://discordapp.com/oauth2/authorize?client_id=616308233950199828&scope=bot&permissions=18432'
+        url='https://discordapp.com/oauth2/authorize?client_id=616308233950199828&scope=bot&permissions=18432'
     )
     embed.set_image(
-        url=
-        'https://cdn.discordapp.com/attachments/539843161711968278/625373937102094336/d3d41affe02b7c34414883979a5aac52.png'
+        url='https://cdn.discordapp.com/attachments/539843161711968278/625373937102094336/d3d41affe02b7c34414883979a5aac52.png'
     )
     await ctx.send(embed=embed)
 
