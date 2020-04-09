@@ -10,6 +10,7 @@ class MinecraftInfo(commands.Cog, name="Minecraft Info"):
 
     @commands.command()
     async def blocks(self, ctx):
+        """Get the amount of blocks in Minecraft."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -18,6 +19,7 @@ class MinecraftInfo(commands.Cog, name="Minecraft Info"):
 
     @commands.command()
     async def snapshots(self, ctx):
+        """Get info about the current snapshots."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -47,6 +49,7 @@ https://www.minecraft.net/en-us/article/minecraft-snapshot-20w15a
 
     @commands.command()
     async def wiki(self, ctx):
+        """Get the link to the Minecraft Wiki."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -59,6 +62,7 @@ https://www.minecraft.net/en-us/article/minecraft-snapshot-20w15a
 
     @commands.command()
     async def bedrock(self, ctx):
+        """Get info about Minecraft Bedrock edition."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -72,6 +76,7 @@ https://www.minecraft.net/en-us/article/minecraft-snapshot-20w15a
 
     @commands.command()
     async def java(self, ctx):
+        """Get info about Minecraft Java edition."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)

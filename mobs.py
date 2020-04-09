@@ -8,6 +8,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
 
     @commands.command()
     async def zombie(self, ctx):
+        """Send info about the Zombie mob."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -32,6 +33,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
 
     @commands.command()
     async def spider(self, ctx):
+        """Send info about the Spider mob."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -49,6 +51,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
 
     @commands.command()
     async def skeleton(self, ctx):
+        """Send info about the Skeleton mob."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -77,6 +80,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
 
     @commands.command()
     async def zombiepigman(self, ctx):
+        """Send info about the Zombie Pigman mob."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -106,6 +110,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
 
     @commands.command()
     async def enderdragon(self, ctx):
+        """Send info about the Enderdragon mob/boss."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -126,6 +131,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
 
     @commands.command()
     async def wither(self, ctx):
+        """Send info about the Wither mob/boss."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -149,6 +155,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
 
     @commands.command()
     async def pig(self, ctx):
+        """Send info about the Pig mob."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -171,6 +178,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
 
     @commands.command()
     async def cow(self, ctx):
+        """Send info about the Cow mob."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -191,6 +199,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
 
     @commands.command()
     async def sheep(self, ctx):
+        """Send info about the Sheep mob."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)

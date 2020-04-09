@@ -10,6 +10,7 @@ class Misc(commands.Cog, name="Miscellaneous"):
 
     @commands.command()
     async def ping(self, ctx):
+        """Check the ping of the bot."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -22,6 +23,7 @@ class Misc(commands.Cog, name="Miscellaneous"):
 
     @commands.command()
     async def server(self, ctx):
+        """Get the invite for the support server."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -44,6 +46,7 @@ class Misc(commands.Cog, name="Miscellaneous"):
 
     @commands.command()
     async def vote(self, ctx):
+        """Get the link to vote for the bot."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -59,6 +62,11 @@ class Misc(commands.Cog, name="Miscellaneous"):
 
     @commands.command()
     async def senddiamonds(self, ctx, member: discord.User):
+        """Send diamonds to a user.
+
+        Arguments:
+            member {discord.User} -- The user to send diamonds to.
+        """
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
