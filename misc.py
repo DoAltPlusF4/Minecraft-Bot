@@ -84,7 +84,7 @@ class Misc(commands.Cog, name="Miscellaneous"):
         for id in c.OWNERS:
             user = self.bot.get_user(id)
             await user.send(f"""
-            __**Feedback, sent by __`{ctx.author}`:`{ctx.author.id}`__:**__
+            **Feedback, sent by `{ctx.author}`:**
             {feedback}
             """)
 
