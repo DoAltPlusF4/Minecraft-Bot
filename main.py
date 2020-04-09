@@ -61,7 +61,6 @@ class Bot(commands.Bot):
             await channel.send(embed=embed)
 
 
-print("Test")
 bot = Bot(command_prefix='m!')
 TOKEN = os.environ.get("token")
 bot.run(TOKEN, bot=True, reconnect=True)
