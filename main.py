@@ -33,9 +33,9 @@ class Bot(commands.Bot):
 
         # Cogs Setup
         non_prefix.setup(self)
-        misc.setup(self)
-        mobs.setup(self)
         info.setup(self)
+        mobs.setup(self)
+        misc.setup(self)
 
     async def on_message(self, message):
         """Ignore bots."""
