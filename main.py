@@ -4,13 +4,7 @@ import os
 import discord
 from discord.ext import commands
 
-import keep_alive
 import constants as c
-from dotenv import load_dotenv
-
-load_dotenv()
-TOKEN = os.getenv("TOKEN")
-
 
 class Bot(commands.Bot):
     def __init__(self, *args, **kwargs):
@@ -65,5 +59,6 @@ class Bot(commands.Bot):
 
 if __name__ == "__main__":
     bot = Bot(command_prefix='m!')
-    keep_alive.keep_alive()
+    TOKEN = os.environ.get("token")
     bot.run(TOKEN, bot=True, reconnect=True)
+    
