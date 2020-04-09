@@ -77,6 +77,20 @@ class Misc(commands.Cog, name="Miscellaneous"):
         """)
         await ctx.send("Sent!")
 
+    @commands.command()
+    async def feedback(self, ctx, *, feedback):
+        """Sends user feedback to the owners."""
+
+        for id in c.OWNERS:
+            user = self.bot.get_user(id)
+            await user.send(f"""
+            __**Feedback, sent by `{ctx.author}`:`{ctx.author.id}`:**__
+
+            {feedback}
+            """)
+
+        await ctx.send("Sent!")
+
 
 def setup(bot):
     bot.add_cog(Misc(bot))
