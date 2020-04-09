@@ -64,6 +64,7 @@ class Bot(commands.Bot):
 
 
 if __name__ == "__main__":
-    bot = Bot(command_prefix='m!')
+    bot = Bot(command_prefix='m!',
+              description="I'll get better help formatting soon, I swear!")
     TOKEN = os.environ.get("token")
     bot.run(TOKEN, bot=True, reconnect=True)
