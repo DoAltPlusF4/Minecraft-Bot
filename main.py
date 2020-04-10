@@ -13,11 +13,12 @@ import non_prefix
 
 bot.remove_command('help')
 
+
 class Bot(commands.Bot):
     def __init__(self, *args, **kwargs):
         """Initialise client, make support server attribute."""
         super().__init__(*args, **kwargs)
-        # self.remove_command("help")
+        self.remove_command("help")
 
     async def on_ready(self):
         """Set status and print client info."""
