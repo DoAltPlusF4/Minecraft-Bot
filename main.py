@@ -11,8 +11,6 @@ import misc
 import mobs
 import non_prefix
 
-bot.remove_command('help')
-
 
 class Bot(commands.Bot):
     def __init__(self, *args, **kwargs):
