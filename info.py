@@ -15,8 +15,7 @@ class MinecraftInfo(commands.Cog, name="Minecraft Info"):
         print(ctx.message.author)
         print(ctx.message.guild)
         embed = discord.Embed(
-            title="Minecraft Bot Commands"
-            colour=discord.Colour.green()
+            title="Minecraft Bot Commands",
             description='''
             *Prefix = m!*
             __**Minecraft Info:**__
@@ -43,10 +42,10 @@ __**Mob Info:**__
   zombiepigman Send info about the Zombie Pigman mob.
 
   Bot Created by matthew#8906 and ( ͡° ͜ʖ ͡°)#0001
-'''
+''',
+            colour=discord.Colour.green()
         )
         await ctx.send(embed=embed)
-
 
     @commands.command()
     async def blocks(self, ctx):
