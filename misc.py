@@ -92,7 +92,7 @@ class Misc(commands.Cog, name="Miscellaneous"):
 
     @commands.command()
     async def help(self, ctx):
-        "Commands for Minecraft Bot"
+        """Commands for Minecraft Bot"""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
