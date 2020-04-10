@@ -9,45 +9,6 @@ class MinecraftInfo(commands.Cog, name="Minecraft Info"):
         self.bot = bot
 
     @commands.command()
-    async def help(self, ctx):
-        "Commands for Minecraft Bot"
-        print(ctx.message.content)
-        print(ctx.message.author)
-        print(ctx.message.guild)
-        embed = discord.Embed(
-            title="Minecraft Bot Commands",
-            description='''
-            *Prefix = m!*
-            __**Minecraft Info:**__
-  bedrock      Get info about Minecraft Bedrock edition.
-  blocks       Get the amount of blocks in Minecraft.
-  java         Get info about Minecraft Java edition.
-  snapshots    Get info about the current snapshots.
-  wiki         Get the link to the Minecraft Wiki.
-__**Miscellaneous:**__
-  feedback     Sends user feedback to the owners.
-  ping         Check the ping of the bot.
-  senddiamonds Send diamonds to a user.
-  server       Get the invite for the support server.
-  vote         Get the link to vote for the bot.
-__**Mob Info:**__
-  cow          Send info about the Cow mob.
-  enderdragon  Send info about the Enderdragon mob/boss.
-  pig          Send info about the Pig mob.
-  sheep        Send info about the Sheep mob.
-  skeleton     Send info about the Skeleton mob.
-  spider       Send info about the Spider mob.
-  wither       Send info about the Wither mob/boss.
-  zombie       Send info about the Zombie mob.
-  zombiepigman Send info about the Zombie Pigman mob.
-
-  Bot Created by matthew#8906 and ( ͡° ͜ʖ ͡°)#0001
-''',
-            colour=discord.Colour.green()
-        )
-        await ctx.send(embed=embed)
-
-    @commands.command()
     async def blocks(self, ctx):
         """Get the amount of blocks in Minecraft."""
         print(ctx.message.content)
