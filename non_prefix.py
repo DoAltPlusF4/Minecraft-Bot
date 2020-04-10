@@ -7,7 +7,7 @@ class NonPrefix(commands.Cog, name="Non-Prefix"):
 
     def __init__(self, bot):
         self.bot = bot
-    
+
     @commands.Cog.listener()
     async def on_message(self, message):
         """Check for any non-prefix commands."""
@@ -48,6 +48,7 @@ class NonPrefix(commands.Cog, name="Non-Prefix"):
                 "the creepers tryna steal all our stuff again"
         ):
             await message.channel.send("stuff again, 'gain, 'gain")
-        
+
+
 def setup(bot):
     bot.add_cog(NonPrefix(bot))

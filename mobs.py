@@ -1,12 +1,14 @@
 import discord
 from discord.ext import commands
 
+
 class MobInfo(commands.Cog, name="Mob Info"):
     def __init__(self, bot):
         self.bot = bot
 
     @commands.command()
     async def zombie(self, ctx):
+        """Send info about the Zombie mob."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -25,14 +27,13 @@ class MobInfo(commands.Cog, name="Mob Info"):
             """,
             colour=discord.Colour.green())
         embed.set_image(
-            url=
-            "https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/4/42/ZombieInDoor.png/300px-ZombieInDoor.png?version=1cf1c53737551fae1d2df791383f1122"
+            url="https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/4/42/ZombieInDoor.png/300px-ZombieInDoor.png?version=1cf1c53737551fae1d2df791383f1122"
         )
         await ctx.send(embed=embed)
 
-
     @commands.command()
     async def spider(self, ctx):
+        """Send info about the Spider mob."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -44,14 +45,13 @@ class MobInfo(commands.Cog, name="Mob Info"):
     Spiders can climb up over walls and other obstacles. If a spider cannot find an ideal path to the player (when a player goes behind or on top of a wall), it approaches as close as it can to the player"s position from the outside or below, and proceed to climb the wall vertically until it gets to the top, even if it loses its aggression towards the player. Additionally, when a spider loses its aggression on the player, it continues moving forward blindly for about two seconds. This behavior causes the spider to climb up any walls in its path. If a spider tries to go through the world border, it starts climbing the world border instead.""",
             colour=discord.Colour.red())
         embed.set_image(
-            url=
-            "https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/8/84/Spider.png/150px-Spider.png?version=f0d20dc8fb4812c9954026abc83fbb08"
+            url="https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/8/84/Spider.png/150px-Spider.png?version=f0d20dc8fb4812c9954026abc83fbb08"
         )
         await ctx.send(embed=embed)
 
-
     @commands.command()
     async def skeleton(self, ctx):
+        """Send info about the Skeleton mob."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -74,14 +74,13 @@ class MobInfo(commands.Cog, name="Mob Info"):
     Skeletons holding tipped arrows in their offhand always shoot that type of arrow; these arrows are not consumed.""",
         )
         embed.set_image(
-            url=
-            "https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/2/23/Skeleton.png/125px-Skeleton.png?version=65b75c40596c1824995eb8bb5180bac0"
+            url="https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/2/23/Skeleton.png/125px-Skeleton.png?version=65b75c40596c1824995eb8bb5180bac0"
         )
         await ctx.send(embed=embed)
 
-
     @commands.command()
     async def zombiepigman(self, ctx):
+        """Send info about the Zombie Pigman mob."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -105,14 +104,13 @@ class MobInfo(commands.Cog, name="Mob Info"):
     Zombie pigmen are undead mobs, and are damaged by the status effect Instant Health and healed by the status effect Instant Damage. They are unaffected by the status effects Regeneration and Poison. They are ignored by the wither and affected by the Smite Enchantment.""",
             colour=discord.Colour.green())
         embed.set_image(
-            url=
-            "https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/0/09/Zombie_Pigman.png/150px-Zombie_Pigman.png?version=e4e4427627095d2a70017d437eeb3beb"
+            url="https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/0/09/Zombie_Pigman.png/150px-Zombie_Pigman.png?version=e4e4427627095d2a70017d437eeb3beb"
         )
         await ctx.send(embed=embed)
 
-
     @commands.command()
     async def enderdragon(self, ctx):
+        """Send info about the Enderdragon mob/boss."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -127,14 +125,13 @@ class MobInfo(commands.Cog, name="Mob Info"):
     Players can re-summon the ender dragon once the fight is over by placing four end crystals on the edges of the exit portal — one on each side. (Fewer crystals can be used by exploiting this trick.) When the dragon is re-summoned, a series of explosions resets the obsidian pillars, iron bars, and end crystals. The top of each pillar will appear to explode, destroying any player-placed blocks.""",
             colour=discord.Colour.purple())
         embed.set_image(
-            url=
-            "https://gamepedia.cursecdn.com/minecraft_gamepedia/0/0a/Ender_Dragon.gif?version=747d5fc9faed80f1aea57b0b234bcc85"
+            url="https://gamepedia.cursecdn.com/minecraft_gamepedia/0/0a/Ender_Dragon.gif?version=747d5fc9faed80f1aea57b0b234bcc85"
         )
         await ctx.send(embed=embed)
 
-
     @commands.command()
     async def wither(self, ctx):
+        """Send info about the Wither mob/boss."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -152,14 +149,13 @@ class MobInfo(commands.Cog, name="Mob Info"):
     """,
         )
         embed.set_image(
-            url=
-            "https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/a/aa/Wither.png/250px-Wither.png?version=91949cfe97fe259bf5fda0393e4c4373"
+            url="https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/a/aa/Wither.png/250px-Wither.png?version=91949cfe97fe259bf5fda0393e4c4373"
         )
         await ctx.send(embed=embed)
 
-
     @commands.command()
     async def pig(self, ctx):
+        """Send info about the Pig mob."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -176,22 +172,20 @@ class MobInfo(commands.Cog, name="Mob Info"):
     When a pig is struck by lightning or hit by a trident with the Channeling enchantment during a thunderstorm, it transforms into a zombie pigman. If the pig was equipped with a saddle, the saddle is lost, and a mounted player is ejected.""",
             colour=discord.Colour.purple())
         embed.set_image(
-            url=
-            "https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/2/20/Saddled_Pig.png/150px-Saddled_Pig.png?version=86aec73af77217ee1d10fc0a11fe0557"
+            url="https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/2/20/Saddled_Pig.png/150px-Saddled_Pig.png?version=86aec73af77217ee1d10fc0a11fe0557"
         )
         await ctx.send(embed=embed)
 
-
     @commands.command()
     async def cow(self, ctx):
+        """Send info about the Cow mob."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
         print("--------------------------------")
         embed = discord.Embed(
             title="Cow",
-            description=
-            """A cow wanders around, mooing and breathing occasionally. They avoid water, lava and walking off cliffs high enough to cause fall damage. They flee for a few seconds when harmed.
+            description="""A cow wanders around, mooing and breathing occasionally. They avoid water, lava and walking off cliffs high enough to cause fall damage. They flee for a few seconds when harmed.
 
     A cow follows a player who holds wheat, but stops following if separated from the player by at least 8 blocks.
 
@@ -199,14 +193,13 @@ class MobInfo(commands.Cog, name="Mob Info"):
     """,
             colour=discord.Colour.dark_red())
         embed.set_image(
-            url=
-            "https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/8/84/Cow.png/150px-Cow.png?version=0c947ece55d9b6745a416496302a09f9"
+            url="https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/8/84/Cow.png/150px-Cow.png?version=0c947ece55d9b6745a416496302a09f9"
         )
         await ctx.send(embed=embed)
 
-
     @commands.command()
     async def sheep(self, ctx):
+        """Send info about the Sheep mob."""
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
@@ -231,10 +224,10 @@ class MobInfo(commands.Cog, name="Mob Info"):
     """,
             colour=discord.Colour.dark_red())
         embed.set_image(
-            url=
-            "https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/6/69/White_Sheep.png/160px-White_Sheep.png?version=a84f92e72ee9341aeea392db587459bc"
+            url="https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/6/69/White_Sheep.png/160px-White_Sheep.png?version=a84f92e72ee9341aeea392db587459bc"
         )
         await ctx.send(embed=embed)
+
 
 def setup(bot):
     bot.add_cog(MobInfo(bot))
