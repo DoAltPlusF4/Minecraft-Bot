@@ -3,6 +3,7 @@ from discord.ext import commands
 
 
 class MobInfo(commands.Cog, name="Mob Info"):
+    """Get info about certain mobs."""
     def __init__(self, bot):
         self.bot = bot
 

@@ -5,6 +5,7 @@ from . import constants as c
 
 
 class Misc(commands.Cog, name="Miscellaneous"):
+    """Miscellaneous commands, such as ping, server and vote."""
     def __init__(self, bot):
         self.bot = bot
 
@@ -91,43 +92,64 @@ class Misc(commands.Cog, name="Miscellaneous"):
         await ctx.send("Sent!")
 
     @commands.command()
-    async def help(self, ctx):
-        """Commands for Minecraft Bot"""
-        print(ctx.message.content)
-        print(ctx.message.author)
-        print(ctx.message.guild)
-        embed = discord.Embed(
-            title="Minecraft Bot Commands",
-            description='''
-            ***Prefix = m!***
-            __**Minecraft Info:**__
-  `bedrock`      - Get info about Minecraft Bedrock edition.
-  `blocks`       - Get the amount of blocks in Minecraft.
-  `java`         - Get info about Minecraft Java edition.
-  `snapshots`    - Get info about the current snapshots.
-  `wiki`         - Get the link to the Minecraft Wiki.
-__**Miscellaneous:**__
-  `feedback`     - Sends user feedback to the owners.
-  `ping`         - Check the ping of the bot.
-  `senddiamonds` - Send diamonds to a user.
-  `server`       - Get the invite for the support server.
-  `vote`         - Get the link to vote for the bot.
-__**Mob Info:**__
-  `cow`          - Send info about the Cow mob.
-  `enderdragon`  - Send info about the Enderdragon mob/boss.
-  `pig`          - Send info about the Pig mob.
-  `sheep`        - Send info about the Sheep mob.
-  `skeleton`     - Send info about the Skeleton mob.
-  `spider`       - Send info about the Spider mob.
-  `wither`       - Send info about the Wither mob/boss.
-  `zombie`       - Send info about the Zombie mob.
-  `zombiepigman` - Send info about the Zombie Pigman mob.
-
-  Bot Created by matthew#8906 and ( ͡° ͜ʖ ͡°)#0001
-''',
-            colour=discord.Colour.green()
-        )
-        await ctx.send(embed=embed)
+    async def help(self, ctx, *, cog=None):
+        """This command!"""
+        if cog is None:
+            embed = discord.Embed(
+                title="Category Listing and Uncatergorized Commands",
+                description="""Use `m!help *category*` to find out more about them!""",
+                colour=discord.Colour.green()
+            )
+            cogs_desc = ""
+            for cog in self.bot.cogs:
+                if cog != "Non-Prefix":
+                    cogs_desc += f"`{cog}` - **{self.bot.cogs[cog].__doc__}**\n"
+            embed.add_field(
+                name="Categories",
+                value=cogs_desc[:len(cogs_desc) - 1],
+                inline=False
+            )
+            commands = [
+                cmd for cmd in self.bot.walk_commands() if 
+                not (cmd.cog_name or cmd.hidden)
+            ]
+            if len(commands) > 0:
+                cmds_desc = ""
+                for cmd in commands:
+                    cmds_desc += f"`{cmd.name}` - **{cmd.help}**\n"
+                embed.add_field(
+                    name="Uncatergorized Commands",
+                    value=cmds_desc[0:len(cmds_desc) - 1],
+                    inline=False
+                )
+            # await ctx.message.add_reaction(emoji="✉")
+            # await ctx.message.author.send(embed=embed)
+            await ctx.send(embed=embed)
+        else:
+            bot_cogs = {name.lower(): cog for name, cog in self.bot.cogs.items()}
+            if cog.lower() in bot_cogs.keys() and cog.lower() != "non-prefix":
+                embed = discord.Embed(
+                    title=f"{list(self.bot.cogs.keys())[list(self.bot.cogs.values()).index(bot_cogs[cog.lower()])]} Command Listing",
+                    description=f"__{bot_cogs[cog.lower()].__doc__}__",
+                    colour=discord.Colour.green()
+                )
+                for command in bot_cogs[cog.lower()].get_commands():
+                    if not command.hidden:
+                        embed.add_field(
+                            name=command.name,
+                            value=f"**{command.help}**",
+                            inline=False
+                        )
+                # await ctx.message.add_reaction(emoji='✉')
+                # await ctx.message.author.send(embed=embed)
+                await ctx.send(embed=embed)
+            else:
+                embed = discord.Embed(
+                    title='Error!',
+                    description=f"The category `{cog}` doesn't even exist!",
+                    color=discord.Color.green()
+                )
+                await ctx.send(embed=embed)
 
 
 def setup(bot):
