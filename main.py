@@ -9,7 +9,7 @@ if __name__ == "__main__":
         command_prefix="m!",
         description="Now with added bullshit!"
     )
-    terraria_bot = terraria.bot.TerrariaBot(
+    terraria_bot = terraria.bot.Bot(
         command_prefix='t!',
         description="Something here!"
     )

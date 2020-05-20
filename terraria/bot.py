@@ -6,13 +6,14 @@ from . import misc
 
 import os
 
-class TerrariaBot(commands.Bot):
+
+class Bot(commands.Bot):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.remove_command("help")
 
         misc.setup(self)
-    
+
     async def on_ready(self):
         """Set status and print client info."""
         self.support = self.get_guild(c.SERVER_ID)
@@ -25,7 +26,7 @@ class TerrariaBot(commands.Bot):
                 type=discord.ActivityType.watching
             )
         )
-    
+
     async def on_message(self, message):
         """Ignore bots."""
         if message.author.bot:
@@ -34,8 +35,9 @@ class TerrariaBot(commands.Bot):
         # Process Commands
         await self.process_commands(message)
 
+
 if __name__ == "__main__":
-    bot = TerrariaBot(
+    bot = Bot(
         command_prefix="t!",
         description="Something here!"
     )

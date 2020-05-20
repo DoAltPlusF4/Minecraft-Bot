@@ -4,7 +4,7 @@ import os
 submodules = [bot, constants, misc]
 
 if __name__ == "__main__":
-    terraria_bot = bot.TerrariaBot(
+    terraria_bot = bot.Bot(
         command_prefix='t!',
         description="Something here!"
     )
