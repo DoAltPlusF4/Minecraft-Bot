@@ -63,7 +63,7 @@ class Bot(commands.Bot):
 if __name__ == "__main__":
     bot = Bot(
         command_prefix='m!',
-        description="I'll get better help formatting soon, I swear!"
+        description="Now with added bullshit!"
     )
-    TOKEN = os.environ.get("token")
+    TOKEN = os.environ.get("mc_token")
     bot.run(TOKEN, bot=True, reconnect=True)
