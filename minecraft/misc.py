@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-import constants as c
+from . import constants as c
 
 
 class Misc(commands.Cog, name="Miscellaneous"):
