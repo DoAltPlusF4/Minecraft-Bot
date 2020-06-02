@@ -96,8 +96,12 @@ class Misc(commands.Cog, name="Miscellaneous"):
         """Information about Minecraft Bot"""
         embed = discord.Embed(
             title="Information about Minecraft Bot",
-            description='''Minecraft Bot is a discord bot based around the game Minecraft. It provides information about various topics in Minecraft. This bot is created by matthew#8906 and ( ͡° ͜ʖ ͡°)
-#0001. Use `m!server` for access to our discord server.''',
+            description="""
+            Minecraft Bot is a discord bot based around the game Minecraft. 
+            It provides information about various topics in Minecraft. 
+            This bot is created by matthew#8906 and ( ͡° ͜ʖ ͡°)#0001. 
+            Use `m!server` for access to our discord server.
+            """,
             colour=discord.Colour.green()
         )
         await ctx.send(embed=embed)
