@@ -25,7 +25,7 @@ class MinecraftInfo(commands.Cog, name="Minecraft Info"):
         print(ctx.message.guild)
         await ctx.channel.trigger_typing()
         embed = discord.Embed(
-            title="Minecraft Snapshots",
+            title="Newest Minecraft Snapshots",
             colour=discord.Colour.green(),
             description="""
             __Minecraft Java:__
