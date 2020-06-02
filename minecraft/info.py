@@ -29,22 +29,23 @@ class MinecraftInfo(commands.Cog, name="Minecraft Info"):
             colour=discord.Colour.green(),
             description="""
             __Minecraft Java:__
-**Snapshot 20w15a**
-https://www.minecraft.net/en-us/article/minecraft-snapshot-20w15a
-• Added a Piglin banner pattern
-• Added Basalt Deltas biome to the Nether
-• Added three new tracks of Nether music
-• Added a new set of stone blocks called Blackstone, and Gilded Blackstone
-• Added line spacing and chat delay accessibility options
+**Snapshot 20w22a**
+https://www.minecraft.net/en-us/article/minecraft-snapshot-20w22a
+• Piglins now sometimes dance in celebration of a completed hunt
+• Villager workstation logic changes
+• Bells can be hung from the underside of more blocks
+• Added shader support for accessing depth buffer
+• Experimental changes to graphics rendering
+• Bug fixes
 
-            __Minecraft Bedrock:__
-            **Beta 1.16.0.55**
-            https://feedback.minecraft.net/hc/en-us/articles/360041294872
-             • Carrot on a stick, Shield, and Shovel now lose durability consistently
-             • Light propagation now works correctly, fixing hostile mob spawning
-             • Water can now be collected from Bubble Columns using a bucket 
-             • Creepers no longer lose aggro immediately after losing sight of its target
-             • Technical changes and bug fixes
+**Beta 1.16.0.64**
+https://feedback.minecraft.net/hc/en-us/articles/360043752812
+• New Nether biomes, blocks and structures no longer generate in worlds with a fixed version defined
+• Fixed an issue that could cause tile entities in a chunk to lose their data when the chunk is loaded
+• Cured zombie villagers can breed again
+• Mobs that are path finding will be able to get to the end of their path
+• Textures now load correctly when descending from high altitude 
+• Add-on and scripting fixes
             """)
         await ctx.send(embed=embed)
 

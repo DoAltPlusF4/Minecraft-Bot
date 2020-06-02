@@ -92,6 +92,18 @@ class Misc(commands.Cog, name="Miscellaneous"):
         await ctx.send("Sent!")
 
     @commands.command()
+    async def info(self, ctx):
+        """Information about Minecraft Bot"""
+        embed = discord.Embed(
+            title="Information about Minecraft Bot",
+            description='''Minecraft Bot is a discord bot based around the game Minecraft. It provides information about various topics in Minecraft. This bot is created by matthew#8906 and ( ͡° ͜ʖ ͡°)
+#0001. Use `m!server` for access to our discord server.''',
+            colour=discord.Colour.green()
+        )
+        await ctx.send(embed=embed)
+
+
+    @commands.command()
     async def help(self, ctx, *, cog=None):
         """This command!"""
         if cog is None:
