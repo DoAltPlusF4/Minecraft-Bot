@@ -15,10 +15,10 @@ class Misc(commands.Cog, name="Miscellaneous"):
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
-        print('--------------------------------')
+        print("--------------------------------")
         embed = discord.Embed(
-            title='Bot Latency',
-            description=f'**{int(self.bot.latency * 100)}**ms',
+            title="Bot Latency",
+            description=f"**{int(self.bot.latency * 100)}**ms",
             colour=discord.Colour.green())
         return await ctx.send(embed=embed)
 
@@ -28,17 +28,17 @@ class Misc(commands.Cog, name="Miscellaneous"):
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
-        print('--------------------------------')
+        print("--------------------------------")
         await ctx.channel.trigger_typing()
         if ctx.guild.id == c.SERVER_ID:
             embed = discord.Embed(
-                title='You are already in this server',
-                description=f'However, you can still invite your friends with this link: {c.SERVER_INVITE}',
+                title="You are already in this server",
+                description=f"However, you can still invite your friends with this link: {c.SERVER_INVITE}",
                 colour=discord.Colour.green()
             )
         else:
             embed = discord.Embed(
-                title='--> Minecraft Bot Official Server <--',
+                title="--> Minecraft Bot Official Server <--",
                 colour=discord.Colour.green(),
                 url=c.SERVER_INVITE
             )
@@ -51,7 +51,7 @@ class Misc(commands.Cog, name="Miscellaneous"):
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
-        print('--------------------------------')
+        print("--------------------------------")
         await ctx.channel.trigger_typing()
         embed = discord.Embed(
             title="--> Vote for Minecraft Bot <--",
@@ -71,7 +71,7 @@ class Misc(commands.Cog, name="Miscellaneous"):
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
-        print('--------------------------------')
+        print("--------------------------------")
         await member.send(f"""
         Have some diamonds!!!!!!! ** Sent by {ctx.message.author} **
 	    <:diamond:616316009288040470> <:diamond:616316009288040470> <:diamond:616316009288040470> <:diamond:616316009288040470> <:diamond:616316009288040470> 
@@ -156,12 +156,12 @@ class Misc(commands.Cog, name="Miscellaneous"):
                             value=f"**{command.help}**",
                             inline=False
                         )
-                # await ctx.message.add_reaction(emoji='✉')
+                # await ctx.message.add_reaction(emoji="✉")
                 # await ctx.message.author.send(embed=embed)
                 await ctx.send(embed=embed)
             else:
                 embed = discord.Embed(
-                    title='Error!',
+                    title="Error!",
                     description=f"The category `{cog}` doesn't even exist!",
                     color=discord.Color.green()
                 )

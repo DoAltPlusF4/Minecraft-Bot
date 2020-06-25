@@ -10,7 +10,7 @@ if __name__ == "__main__":
         description="Now with added bullshit!"
     )
     terraria_bot = terraria.bot.Bot(
-        command_prefix='t!',
+        command_prefix="t!",
         description="Something here!"
     )
 

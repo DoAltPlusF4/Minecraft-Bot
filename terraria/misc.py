@@ -58,12 +58,12 @@ class Misc(commands.Cog, name="Miscellaneous"):
                             value=f"**{command.help}**",
                             inline=False
                         )
-                # await ctx.message.add_reaction(emoji='✉')
+                # await ctx.message.add_reaction(emoji="✉")
                 # await ctx.message.author.send(embed=embed)
                 await ctx.send(embed=embed)
             else:
                 embed = discord.Embed(
-                    title='Error!',
+                    title="Error!",
                     description=f"The category `{cog}` doesn't even exist!",
                     color=discord.Color.green()
                 )
@@ -75,10 +75,10 @@ class Misc(commands.Cog, name="Miscellaneous"):
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
-        print('--------------------------------')
+        print("--------------------------------")
         embed = discord.Embed(
-            title='Bot Latency',
-            description=f'**{int(self.bot.latency * 100)}**ms',
+            title="Bot Latency",
+            description=f"**{int(self.bot.latency * 100)}**ms",
             colour=discord.Colour.green())
         return await ctx.send(embed=embed)
 
@@ -88,17 +88,17 @@ class Misc(commands.Cog, name="Miscellaneous"):
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
-        print('--------------------------------')
+        print("--------------------------------")
         await ctx.channel.trigger_typing()
         if ctx.guild.id == c.SERVER_ID:
             embed = discord.Embed(
-                title='You are already in this server',
+                title="You are already in this server",
                 description=
-                f'However, you can still invite your friends with this link: {c.SERVER_INVITE}',
+                f"However, you can still invite your friends with this link: {c.SERVER_INVITE}",
                 colour=discord.Colour.green())
         else:
             embed = discord.Embed(
-                title='--> Terraria Bot Official Server <--',
+                title="--> Terraria Bot Official Server <--",
                 colour=discord.Colour.green(),
                 url=c.SERVER_INVITE)
         embed.set_image(url=self.bot.user.avatar_url)
@@ -110,12 +110,12 @@ class Misc(commands.Cog, name="Miscellaneous"):
         print(ctx.message.content)
         print(ctx.message.author)
         print(ctx.message.guild)
-        print('--------------------------------')
+        print("--------------------------------")
         await ctx.channel.trigger_typing()
         embed = discord.Embed(
-            title='--> Vote for Terraria Bot <--',
+            title="--> Vote for Terraria Bot <--",
             colour=discord.Colour.green(),
-            url='https://google.com')
+            url="https://google.com")
         embed.set_image(url=self.bot.user.avatar_url)
         await ctx.send(embed=embed)
 

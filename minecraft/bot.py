@@ -18,7 +18,7 @@ class Bot(commands.Bot):
     async def on_ready(self):
         """Set status and print client info."""
         self.support = self.get_guild(c.SERVER_ID)
-        print('Logged on')
+        print("Logged on")
         print(self.user.name)
         await self.change_presence(
             status=discord.Status.dnd,
@@ -58,12 +58,3 @@ class Bot(commands.Bot):
             )
             embed.set_thumbnail(url=self.support.icon_url)
             await channel.send(embed=embed)
-
-
-if __name__ == "__main__":
-    bot = Bot(
-        command_prefix='m!',
-        description="Now with added bullshit!"
-    )
-    TOKEN = os.environ.get("mc_token")
-    bot.run(TOKEN, bot=True, reconnect=True)
