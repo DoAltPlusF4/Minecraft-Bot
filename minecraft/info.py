@@ -29,23 +29,18 @@ class MinecraftInfo(commands.Cog, name="Minecraft Info"):
             colour=discord.Colour.green(),
             description="""
             __Minecraft Java:__
-**Snapshot 20w22a**
-https://www.minecraft.net/en-us/article/minecraft-snapshot-20w22a
-• Piglins now sometimes dance in celebration of a completed hunt
-• Villager workstation logic changes
-• Bells can be hung from the underside of more blocks
-• Added shader support for accessing depth buffer
-• Experimental changes to graphics rendering
-• Bug fixes
+**1.16.1**
+https://www.minecraft.net/en-us/article/minecraft-java-edition-1-16-1
+• Realms stability fixes.
 
-**Beta 1.16.0.64**
-https://feedback.minecraft.net/hc/en-us/articles/360043752812
-• New Nether biomes, blocks and structures no longer generate in worlds with a fixed version defined
-• Fixed an issue that could cause tile entities in a chunk to lose their data when the chunk is loaded
-• Cured zombie villagers can breed again
-• Mobs that are path finding will be able to get to the end of their path
-• Textures now load correctly when descending from high altitude 
-• Add-on and scripting fixes
+**Beta 1.16.20.50**
+https://feedback.minecraft.net/hc/en-us/articles/360045006632
+• Added Piglin Brute mob
+• Updated Piglin geometry and entity files
+• New Nether biomes, blocks and structures no longer generate in worlds with a fixed version
+• Netherite items in lava no longer disappear when reloading world
+• Fixed several issues with duplicating items that could occur when reloading a world while Piglin is admiring an item 
+• Bug fixes
             """)
         await ctx.send(embed=embed)
 
