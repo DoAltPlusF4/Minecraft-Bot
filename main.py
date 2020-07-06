@@ -2,7 +2,6 @@ import asyncio
 import os
 
 import minecraft
-import terraria
 
 if __name__ == "__main__":
     mc_bot = minecraft.bot.Bot(
