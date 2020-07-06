@@ -22,7 +22,7 @@ class Bot(commands.Bot):
         await self.change_presence(
             status=discord.Status.online,
             activity=discord.Activity(
-                name=f"Half-Life 3",
+                name=f"slimes die with {len(self.guilds)} servers!",
                 type=discord.ActivityType.watching
             )
         )
