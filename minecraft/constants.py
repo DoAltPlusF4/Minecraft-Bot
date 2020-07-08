@@ -1,6 +1,6 @@
 # Support Server
 SERVER_ID = 730338529829322803
-SERVER_INVITE = "https://discord.gg/X6cxXck"
+SERVER_INVITE = "https://discord.gg/3TeqCsE"
 WELCOME_CHANNEL = 730338530219524096
 
 # Owners
