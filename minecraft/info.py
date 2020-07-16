@@ -29,17 +29,22 @@ class MinecraftInfo(commands.Cog, name="Minecraft Info"):
             colour=discord.Colour.green(),
             description="""
             __Minecraft Java:__
-**1.16.1**
-https://www.minecraft.net/en-us/article/minecraft-java-edition-1-16-1
-• Realms stability fixes.
+**Snapshot 20w29a**
+https://www.minecraft.net/en-us/article/minecraft-snapshot-20w29a
+• Tools are now sorted based on material in the creative inventory.
+• New parameter for spawnpoint and setworldspawn: angle - setting the default facing angle of a respawning player.
+• Customized world generation: worldgen/noise_settings  can now contain noise configurations.
+• Fixed an issue that could cause bone meal to not create flowers.
+• Fixes an issue that could cause birch trees to not generate correctly in the Birch Forest and Birch Forest Hills biomes.
+• Bugs fixes.
 
-**Beta 1.16.20.50**
-https://feedback.minecraft.net/hc/en-us/articles/360045006632
-• Added Piglin Brute mob
-• Updated Piglin geometry and entity files
-• New Nether biomes, blocks and structures no longer generate in worlds with a fixed version
-• Netherite items in lava no longer disappear when reloading world
-• Fixed several issues with duplicating items that could occur when reloading a world while Piglin is admiring an item 
+            __Minecraft Bedrock:__
+**Beta 1.16.20.53**
+https://feedback.minecraft.net/hc/en-us/articles/360045908892
+• Improved highlighting and selecting recipes when using a controller
+• Loom blocks will no longer cause an out of memory crash when using high resolution resource packs 
+• Opening old worlds will no longer cause chunks to become 100% air
+• Piglins and Piglin Brutes can now spawn with enchanted weapons
 • Bug fixes
             """)
         await ctx.send(embed=embed)
