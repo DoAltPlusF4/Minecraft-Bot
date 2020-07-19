@@ -6,7 +6,7 @@ import redis
 from discord.ext import commands
 
 from . import constants as c
-from . import info, misc, mobs, non_prefix
+from . import info, misc, mobs, non_prefix, topgg
 
 
 class Bot(commands.Bot):
@@ -33,6 +33,7 @@ class Bot(commands.Bot):
         info.setup(self)
         mobs.setup(self)
         misc.setup(self)
+        topgg.setup(self)
 
     async def on_message(self, message):
         """Ignore bots."""
