@@ -47,6 +47,7 @@ https://feedback.minecraft.net/hc/en-us/articles/360045908892
 • Piglins and Piglin Brutes can now spawn with enchanted weapons
 • Bug fixes
             """)
+        embed.set_footer(text="Remember to vote on top.gg! m!vote")
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -60,6 +61,7 @@ https://feedback.minecraft.net/hc/en-us/articles/360045908892
             title="Minecraft Wiki",
             description="https://minecraft.gamepedia.com/Minecraft_Wiki",
             color=discord.Colour.blue())
+        embed.set_footer(text="Remember to vote on top.gg! m!vote")
         await ctx.channel.send(embed=embed)
 
     @commands.command()
@@ -74,6 +76,7 @@ https://feedback.minecraft.net/hc/en-us/articles/360045908892
             title="Bedrock is available on:",
             description="Phone and Tablet (Android, IOS, Fire OS, Windows Mobile), Windows 10, Nintendo Switch, Xbox One, PS4, Fire TV and Gear VR. Learn more about Bedrock  at https://minecraft.gamepedia.com/Bedrock_Edition",
             colour=discord.Colour.green())
+        embed.set_footer(text="Remember to vote on top.gg! m!vote")
         await ctx.channel.send(embed=embed)
 
     @commands.command()
@@ -88,6 +91,7 @@ https://feedback.minecraft.net/hc/en-us/articles/360045908892
             title="Java Edition is available on:",
             description="Linux, MacOS and Windows. Learn more about Java Edition  at https://minecraft.gamepedia.com/Java_Edition",
             colour=discord.Colour.green())
+        embed.set_footer(text="Remember to vote on top.gg! m!vote")
         await ctx.channel.send(embed=embed)
 
 

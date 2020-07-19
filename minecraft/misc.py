@@ -6,6 +6,7 @@ from . import constants as c
 
 class Misc(commands.Cog, name="Miscellaneous"):
     """Miscellaneous commands, such as ping, server and vote."""
+
     def __init__(self, bot):
         self.bot = bot
 
@@ -20,6 +21,7 @@ class Misc(commands.Cog, name="Miscellaneous"):
             title="Bot Latency",
             description=f"**{int(self.bot.latency * 100)}**ms",
             colour=discord.Colour.green())
+        embed.set_footer(text="Remember to vote on top.gg! m!vote")
         return await ctx.send(embed=embed)
 
     @commands.command()
@@ -43,6 +45,7 @@ class Misc(commands.Cog, name="Miscellaneous"):
                 url=c.SERVER_INVITE
             )
         embed.set_image(url=self.bot.user.avatar_url)
+        embed.set_footer(text="Remember to vote on top.gg! m!vote")
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -56,7 +59,7 @@ class Misc(commands.Cog, name="Miscellaneous"):
         embed = discord.Embed(
             title="--> Vote for Minecraft Bot <--",
             colour=discord.Colour.green(),
-            url=f"https://top.gg/bot/{self.bot.user.id}/vote"
+            url=f"https://top.gg/bot/616308233950199828/vote"
         )
         embed.set_image(url=self.bot.user.avatar_url)
         await ctx.send(embed=embed)
@@ -104,8 +107,8 @@ class Misc(commands.Cog, name="Miscellaneous"):
             """,
             colour=discord.Colour.green()
         )
+        embed.set_footer(text="Remember to vote on top.gg! m!vote")
         await ctx.send(embed=embed)
-
 
     @commands.command()
     async def help(self, ctx, *, cog=None):
@@ -126,7 +129,7 @@ class Misc(commands.Cog, name="Miscellaneous"):
                 inline=False
             )
             commands = [
-                cmd for cmd in self.bot.walk_commands() if 
+                cmd for cmd in self.bot.walk_commands() if
                 not (cmd.cog_name or cmd.hidden)
             ]
             if len(commands) > 0:
@@ -142,7 +145,8 @@ class Misc(commands.Cog, name="Miscellaneous"):
             # await ctx.message.author.send(embed=embed)
             await ctx.send(embed=embed)
         else:
-            bot_cogs = {name.lower(): cog for name, cog in self.bot.cogs.items()}
+            bot_cogs = {name.lower(): cog for name,
+                        cog in self.bot.cogs.items()}
             if cog.lower() in bot_cogs.keys() and cog.lower() != "non-prefix":
                 embed = discord.Embed(
                     title=f"{list(self.bot.cogs.keys())[list(self.bot.cogs.values()).index(bot_cogs[cog.lower()])]} Command Listing",
@@ -158,6 +162,7 @@ class Misc(commands.Cog, name="Miscellaneous"):
                         )
                 # await ctx.message.add_reaction(emoji="✉")
                 # await ctx.message.author.send(embed=embed)
+                embed.set_footer(text="Remember to vote on top.gg! m!vote")
                 await ctx.send(embed=embed)
             else:
                 embed = discord.Embed(

@@ -52,8 +52,8 @@ class Bot(commands.Bot):
                 description="""
                 Welcome to the official **Minecraft Bot support server**.
 
-                You can place your bot suggestions in the <#697360065463713834> channel,
-                and can ask for support in the <#697394845140123660> channel.
+                You can place your bot suggestions in the <#730338530219524101> channel,
+                and can ask for support in the <#730338530219524102> channel.
                 """,
                 colour=discord.Colour.teal()
             )

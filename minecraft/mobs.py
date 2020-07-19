@@ -4,6 +4,7 @@ from discord.ext import commands
 
 class MobInfo(commands.Cog, name="Mob Info"):
     """Get info about certain mobs."""
+
     def __init__(self, bot):
         self.bot = bot
 
@@ -30,6 +31,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
         embed.set_image(
             url="https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/4/42/ZombieInDoor.png/300px-ZombieInDoor.png?version=1cf1c53737551fae1d2df791383f1122"
         )
+        embed.set_footer(text="Remember to vote on top.gg! m!vote")
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -48,6 +50,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
         embed.set_image(
             url="https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/8/84/Spider.png/150px-Spider.png?version=f0d20dc8fb4812c9954026abc83fbb08"
         )
+        embed.set_footer(text="Remember to vote on top.gg! m!vote")
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -77,6 +80,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
         embed.set_image(
             url="https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/2/23/Skeleton.png/125px-Skeleton.png?version=65b75c40596c1824995eb8bb5180bac0"
         )
+        embed.set_footer(text="Remember to vote on top.gg! m!vote")
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -107,6 +111,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
         embed.set_image(
             url="https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/0/09/Zombie_Pigman.png/150px-Zombie_Pigman.png?version=e4e4427627095d2a70017d437eeb3beb"
         )
+        embed.set_footer(text="Remember to vote on top.gg! m!vote")
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -128,6 +133,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
         embed.set_image(
             url="https://gamepedia.cursecdn.com/minecraft_gamepedia/0/0a/Ender_Dragon.gif?version=747d5fc9faed80f1aea57b0b234bcc85"
         )
+        embed.set_footer(text="Remember to vote on top.gg! m!vote")
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -152,6 +158,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
         embed.set_image(
             url="https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/a/aa/Wither.png/250px-Wither.png?version=91949cfe97fe259bf5fda0393e4c4373"
         )
+        embed.set_footer(text="Remember to vote on top.gg! m!vote")
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -175,6 +182,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
         embed.set_image(
             url="https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/2/20/Saddled_Pig.png/150px-Saddled_Pig.png?version=86aec73af77217ee1d10fc0a11fe0557"
         )
+        embed.set_footer(text="Remember to vote on top.gg! m!vote")
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -196,6 +204,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
         embed.set_image(
             url="https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/8/84/Cow.png/150px-Cow.png?version=0c947ece55d9b6745a416496302a09f9"
         )
+        embed.set_footer(text="Remember to vote on top.gg! m!vote")
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -227,6 +236,7 @@ class MobInfo(commands.Cog, name="Mob Info"):
         embed.set_image(
             url="https://gamepedia.cursecdn.com/minecraft_gamepedia/thumb/6/69/White_Sheep.png/160px-White_Sheep.png?version=a84f92e72ee9341aeea392db587459bc"
         )
+        embed.set_footer(text="Remember to vote on top.gg! m!vote")
         await ctx.send(embed=embed)
 
 
