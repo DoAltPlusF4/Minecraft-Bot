@@ -121,7 +121,7 @@ class Misc(commands.Cog, name="Miscellaneous"):
             )
             cogs_desc = ""
             for cog in self.bot.cogs:
-                if cog != "Non-Prefix":
+                if cog != "Non-Prefix" and cog != "TopGG":
                     cogs_desc += f"`{cog}` - **{self.bot.cogs[cog].__doc__}**\n"
             embed.add_field(
                 name="Categories",
@@ -141,13 +141,12 @@ class Misc(commands.Cog, name="Miscellaneous"):
                     value=cmds_desc[0:len(cmds_desc) - 1],
                     inline=False
                 )
-            # await ctx.message.add_reaction(emoji="✉")
-            # await ctx.message.author.send(embed=embed)
+            embed.set_footer(text="Remember to vote on top.gg! m!vote")
             await ctx.send(embed=embed)
         else:
             bot_cogs = {name.lower(): cog for name,
                         cog in self.bot.cogs.items()}
-            if cog.lower() in bot_cogs.keys() and cog.lower() != "non-prefix":
+            if cog.lower() in bot_cogs.keys() and cog.lower() != "non-prefix" and cog.lower() != "topgg":
                 embed = discord.Embed(
                     title=f"{list(self.bot.cogs.keys())[list(self.bot.cogs.values()).index(bot_cogs[cog.lower()])]} Command Listing",
                     description=f"__{bot_cogs[cog.lower()].__doc__}__",
@@ -160,8 +159,6 @@ class Misc(commands.Cog, name="Miscellaneous"):
                             value=f"**{command.help}**",
                             inline=False
                         )
-                # await ctx.message.add_reaction(emoji="✉")
-                # await ctx.message.author.send(embed=embed)
                 embed.set_footer(text="Remember to vote on top.gg! m!vote")
                 await ctx.send(embed=embed)
             else:
@@ -170,6 +167,7 @@ class Misc(commands.Cog, name="Miscellaneous"):
                     description=f"The category `{cog}` doesn't even exist!",
                     color=discord.Color.green()
                 )
+                embed.set_footer(text="Remember to vote on top.gg! m!vote")
                 await ctx.send(embed=embed)
 
 
